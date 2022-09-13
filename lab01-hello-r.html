@@ -318,8 +318,18 @@ correlation coefficient between <code>x</code> and <code>y</code> for
 this dataset. How does this value compare to the <code>r</code> of
 <code>dino</code>?</li>
 </ol>
-<p><em>This is another good place to pause, commit changes with the
-commit message “Added answer for Ex 3”, and push.</em></p>
+<pre class="r"><code>star_data = datasaurus_dozen %&gt;% 
+  filter(dataset == &quot;star&quot;)
+
+attach(star_data)
+cor(x, y)</code></pre>
+<pre><code>## [1] -0.0629611</code></pre>
+<pre class="r"><code>detach(star_data)
+ggplot(star_data, mapping = aes(x=x, y=y)) +
+  geom_point()</code></pre>
+<p><img src="lab01-hello-r_files/figure-html/unnamed-chunk-10-1.png" width="672" />
+<em>This is another good place to pause, commit changes with the commit
+message “Added answer for Ex 3”, and push.</em></p>
 <ol start="4" style="list-style-type: decimal">
 <li>Plot <code>y</code> vs. <code>x</code> for the <code>circle</code>
 dataset. You can (and should) reuse code we introduced above, just
