@@ -54,6 +54,9 @@ A question mark before the name of an object will always bring up its help file.
 
 1. Based on the help file, how many rows and how many columns does the `datasaurus_dozen` file have? What are the variables included in the data frame? Add your responses to your lab report. When you're done, commit your changes with the commit message "Added answer for Ex 1", and push.
 
+
+1846 rows and 3 columns, variables = dataset, x, y
+
 Let's take a look at what these datasets are. To do so we can make a *frequency table* of the dataset variable:
 
 ```{r}
@@ -141,19 +144,12 @@ datasaurus_dozen %>%
   print(13)
 ```
 
-You're done with the data analysis exercises, but we'd like you to do two more things:
-
-```{r fig-resize-global, fig.margin = TRUE, echo = FALSE, fig.width=3}
-knitr::include_graphics("lab01-hello-r/img/fig-resize-global.png")
-```
 
 - **Resize your figures:** 
 
 Click on the gear icon in on top of the R Markdown document, and select "Output Options..." in the dropdown menu. In the pop up dialogue box go to the Figures tab and change the height and width of the figures, and hit OK when done. Then, knit your document and see how you like the new sizes. Change and knit again and again until you're happy with the figure sizes. Note that these values get saved in the YAML.
 
-```{r fig-resize-local, fig.margin = TRUE, echo = FALSE, fig.width=3}
-knitr::include_graphics("lab01-hello-r/img/fig-resize-local.png")
-```
+
 
 You can also use different figure sizes for different figures. To do so click on the gear icon within the chunk where you want to make a change. Turn on "Use custom figure size" and enter the size for this figure. Changing the figure sizes added new options to these chunks: `fig.width` and `fig.height`. You can change them by defining different values directly in your R Markdown document as well with code like this:
 
@@ -161,9 +157,7 @@ You can also use different figure sizes for different figures. To do so click on
 knitr::opts_chunk(fig.width=3, fig.height=3)
 ```
 
-```{r theme-highlight, fig.margin = TRUE, echo = FALSE, fig.width=3}
-knitr::include_graphics("lab01-hello-r/img/theme-highlight.png")
-```
+
 
 - **Change the look of your report:** 
 
