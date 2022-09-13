@@ -324,6 +324,8 @@ this dataset. How does this value compare to the <code>r</code> of
 attach(star_data)
 cor(x, y)</code></pre>
 <pre><code>## [1] -0.0629611</code></pre>
+<pre class="r"><code>print(&quot;the dino correlation was stronger than the start correlation&quot;)</code></pre>
+<pre><code>## [1] &quot;the dino correlation was stronger than the start correlation&quot;</code></pre>
 <pre class="r"><code>detach(star_data)
 ggplot(star_data, mapping = aes(x=x, y=y)) +
   geom_point()</code></pre>
@@ -338,7 +340,19 @@ correlation coefficient between <code>x</code> and <code>y</code> for
 this dataset. How does this value compare to the <code>r</code> of
 <code>dino</code>?</li>
 </ol>
-<p><em>You should pause again, commit changes with the commit message
+<pre class="r"><code>circ_data = datasaurus_dozen %&gt;% 
+  filter(dataset == &quot;circle&quot;)
+
+attach(circ_data)
+cor(x, y)</code></pre>
+<pre><code>## [1] -0.06834336</code></pre>
+<pre class="r"><code>print(&quot;the dino correlation was stronger than the start correlation&quot;)</code></pre>
+<pre><code>## [1] &quot;the dino correlation was stronger than the start correlation&quot;</code></pre>
+<pre class="r"><code>detach(circ_data)
+ggplot(circ_data, mapping = aes(x=x, y=y)) +
+  geom_point()</code></pre>
+<p><img src="lab01-hello-r_files/figure-html/unnamed-chunk-11-1.png" width="672" />
+<em>You should pause again, commit changes with the commit message
 “Added answer for Ex 4”, and push.</em></p>
 <pre class="marginfigure"><code>Facet by the dataset variable, placing the plots in a 3 column grid, and don&#39;t add a legend.</code></pre>
 <ol start="5" style="list-style-type: decimal">
